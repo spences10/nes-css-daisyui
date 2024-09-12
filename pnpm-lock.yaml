@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@fontsource/press-start-2p':
     specifier: ^5.0.21
-    version: 5.0.22
+    version: 5.1.0
 
 devDependencies:
   '@playwright/test':
@@ -368,8 +368,8 @@ packages:
       levn: 0.4.1
     dev: true
 
-  /@fontsource/press-start-2p@5.0.22:
-    resolution: {integrity: sha512-c1luUg7V2NCh6vkpo/Ixuur/JAXZJg0vrS8pza26SaFqSF+jzQoppVHrOWHptwUnM0f47dR6rLCLMPyCSrPnpg==}
+  /@fontsource/press-start-2p@5.1.0:
+    resolution: {integrity: sha512-l2HeeeNdaO9NJZnW+fKz/aq3rbCTac71LY0mXVhy55h2x5RueN+AWRf5AtC9puD1m5fInvwipKQLvpXj0p47Tg==}
     dev: false
 
   /@humanwhocodes/module-importer@1.0.1:
