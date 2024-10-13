@@ -1,40 +1,77 @@
 <script>
-  import { onMount } from 'svelte';
+	let is_dark_mode = $state(false);
 
-  onMount(() => {
-    document.documentElement.setAttribute('data-theme', 'nes-theme');
-  });
+	$effect(() => {
+		document.documentElement.setAttribute(
+			'data-theme',
+			is_dark_mode ? 'nes-theme-dark' : 'nes-theme',
+		);
+	});
+
+	const toggle_dark_mode = () => {
+		is_dark_mode = !is_dark_mode;
+	};
 </script>
 
-<h1 class="text-4xl font-bold mb-4">NES.css Theme in daisyUI</h1>
+<h1 class="mb-4 text-4xl font-bold">NES.css Theme in daisyUI</h1>
+
+<button class="btn mb-4" onclick={toggle_dark_mode}>
+	Toggle {is_dark_mode ? 'Light' : 'Dark'} Mode
+</button>
 
 <div class="space-y-4">
-  <div>
-    <h2 class="text-2xl mb-2">Buttons</h2>
-    <div class="space-x-2">
-      <button class="btn">Default</button>
-      <button class="btn btn-primary">Primary</button>
-      <button class="btn btn-success">Success</button>
-      <button class="btn btn-warning">Warning</button>
-      <button class="btn btn-error">Error</button>
-      <button class="btn" disabled>Disabled</button>
-    </div>
-  </div>
+	<div>
+		<h2 class="mb-2 text-2xl">Buttons</h2>
+		<div class="space-x-2">
+			<button class="btn">Default</button>
+			<button class="btn btn-primary">Primary</button>
+			<button class="btn btn-success">Success</button>
+			<button class="btn btn-warning">Warning</button>
+			<button class="btn btn-error">Error</button>
+			<button class="btn" disabled>Disabled</button>
+		</div>
+	</div>
 
-  <div>
-    <h2 class="text-2xl mb-2">Input</h2>
-    <input type="text" placeholder="Type here" class="input w-full max-w-xs" />
-  </div>
+	<div>
+		<h2 class="mb-2 text-2xl">Input</h2>
+		<input
+			type="text"
+			placeholder="Type here"
+			class="input w-full max-w-xs"
+		/>
+	</div>
 
-  <!-- Add more NES-style elements here as we implement them -->
+	<div>
+		<h2 class="mb-2 text-2xl">Containers</h2>
+		<div class="container with-title">
+			<p class="title">Default Container</p>
+			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+		</div>
+		<div class="container with-title is-centered">
+			<p class="title">Container.is-centered</p>
+			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+		</div>
+		<div class="container with-title is-right">
+			<p class="title">Container.is-right</p>
+			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+		</div>
+		<div class="container with-title is-dark">
+			<p class="title">Container.is-dark</p>
+			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+		</div>
+		<div class="container is-rounded">
+			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+		</div>
+		<div class="container is-rounded is-dark">
+			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+		</div>
+		<div class="container is-rounded with-title">
+			<p class="title">Rounded with title</p>
+			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+		</div>
+		<div class="container is-rounded is-dark with-title">
+			<p class="title">Rounded dark with title</p>
+			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+		</div>
+	</div>
 </div>
-
-<style>
-  :global(html) {
-    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),auto;
-  }
-
-  :global(button) {
-    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
-  }
-</style>
