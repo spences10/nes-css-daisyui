@@ -19,59 +19,124 @@
 	Toggle {is_dark_mode ? 'Light' : 'Dark'} Mode
 </button>
 
-<div class="space-y-4">
+<div class="space-y-8">
 	<div>
 		<h2 class="mb-2 text-2xl">Buttons</h2>
 		<div class="space-x-2">
 			<button class="btn">Default</button>
 			<button class="btn btn-primary">Primary</button>
-			<button class="btn btn-success">Success</button>
+				<button class="btn btn-success">Success</button>
 			<button class="btn btn-warning">Warning</button>
-			<button class="btn btn-error">Error</button>
+				<button class="btn btn-error">Error</button>
 			<button class="btn" disabled>Disabled</button>
 		</div>
 	</div>
 
 	<div>
-		<h2 class="mb-2 text-2xl">Input</h2>
-		<input
-			type="text"
-			placeholder="Type here"
-			class="input w-full max-w-xs"
-		/>
+		<h2 class="mb-2 text-2xl">Inputs</h2>
+		<div class="space-y-2">
+			<input type="text" placeholder="Default" class="input w-full max-w-xs" />
+			<input type="text" placeholder="Primary" class="input input-primary w-full max-w-xs" />
+			<input type="text" placeholder="Success" class="input input-success w-full max-w-xs" />
+			<input type="text" placeholder="Warning" class="input input-warning w-full max-w-xs" />
+			<input type="text" placeholder="Error" class="input input-error w-full max-w-xs" />
+			<input type="text" placeholder="Disabled" class="input w-full max-w-xs" disabled />
+		</div>
 	</div>
 
 	<div>
-		<h2 class="mb-2 text-2xl">Containers</h2>
-		<div class="container with-title">
-			<p class="title">Default Container</p>
-			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+		<h2 class="mb-2 text-2xl">Selects</h2>
+		<div class="space-y-2">
+			<select class="select w-full max-w-xs">
+				<option disabled selected>Default</option>
+				<option>Option 1</option>
+				<option>Option 2</option>
+			</select>
+			<select class="select select-primary w-full max-w-xs">
+				<option disabled selected>Primary</option>
+				<option>Option 1</option>
+				<option>Option 2</option>
+			</select>
+			<select class="select select-success w-full max-w-xs">
+				<option disabled selected>Success</option>
+				<option>Option 1</option>
+				<option>Option 2</option>
+			</select>
+			<select class="select select-warning w-full max-w-xs">
+				<option disabled selected>Warning</option>
+				<option>Option 1</option>
+				<option>Option 2</option>
+			</select>
+			<select class="select select-error w-full max-w-xs">
+				<option disabled selected>Error</option>
+				<option>Option 1</option>
+				<option>Option 2</option>
+			</select>
+			<select class="select w-full max-w-xs" disabled>
+				<option disabled selected>Disabled</option>
+				<option>Option 1</option>
+				<option>Option 2</option>
+			</select>
 		</div>
-		<div class="container with-title is-centered">
-			<p class="title">Container.is-centered</p>
-			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+	</div>
+
+	<div>
+		<h2 class="mb-2 text-2xl">Checkboxes</h2>
+		<div class="space-y-2">
+			<label class="flex items-center space-x-2">
+				<input type="checkbox" class="checkbox" />
+				<span>Default</span>
+			</label>
+			<label class="flex items-center space-x-2">
+				<input type="checkbox" class="checkbox checkbox-primary" />
+				<span>Primary</span>
+			</label>
+			<label class="flex items-center space-x-2">
+				<input type="checkbox" class="checkbox checkbox-success" />
+				<span>Success</span>
+			</label>
+			<label class="flex items-center space-x-2">
+				<input type="checkbox" class="checkbox checkbox-warning" />
+				<span>Warning</span>
+			</label>
+			<label class="flex items-center space-x-2">
+				<input type="checkbox" class="checkbox checkbox-error" />
+				<span>Error</span>
+			</label>
+			<label class="flex items-center space-x-2">
+				<input type="checkbox" class="checkbox" disabled />
+				<span>Disabled</span>
+			</label>
 		</div>
-		<div class="container with-title is-right">
-			<p class="title">Container.is-right</p>
-			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-		</div>
-		<div class="container with-title is-dark">
-			<p class="title">Container.is-dark</p>
-			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-		</div>
-		<div class="container is-rounded">
-			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-		</div>
-		<div class="container is-rounded is-dark">
-			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-		</div>
-		<div class="container is-rounded with-title">
-			<p class="title">Rounded with title</p>
-			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-		</div>
-		<div class="container is-rounded is-dark with-title">
-			<p class="title">Rounded dark with title</p>
-			<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+	</div>
+
+	<div>
+		<h2 class="mb-2 text-2xl">Radios</h2>
+		<div class="space-y-2">
+			<label class="flex items-center space-x-2">
+				<input type="radio" name="radio-default" class="radio" />
+				<span>Default</span>
+			</label>
+			<label class="flex items-center space-x-2">
+				<input type="radio" name="radio-primary" class="radio radio-primary" />
+				<span>Primary</span>
+			</label>
+			<label class="flex items-center space-x-2">
+				<input type="radio" name="radio-success" class="radio radio-success" />
+				<span>Success</span>
+			</label>
+			<label class="flex items-center space-x-2">
+				<input type="radio" name="radio-warning" class="radio radio-warning" />
+				<span>Warning</span>
+			</label>
+			<label class="flex items-center space-x-2">
+				<input type="radio" name="radio-error" class="radio radio-error" />
+				<span>Error</span>
+			</label>
+			<label class="flex items-center space-x-2">
+				<input type="radio" name="radio-disabled" class="radio" disabled />
+				<span>Disabled</span>
+			</label>
 		</div>
 	</div>
 </div>
